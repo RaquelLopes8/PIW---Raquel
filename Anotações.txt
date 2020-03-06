@@ -1,0 +1,16 @@
+JSX
+
+npx create-react-app my-app
+cd my-app
+my-app start
+
+Componetes React
+
+Props
+
+Eventos
+  -Click, Mouse Down, Double Click...
+
+
+Extensões
+  Simple React Snippets
