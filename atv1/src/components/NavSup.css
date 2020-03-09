@@ -1,0 +1,36 @@
+.nav_superior{
+    height: 20%;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+  }
+
+.img{
+    left: 0;
+    width: 200px;
+    height: 100px;
+    margin-right: 50px;
+}
+
+.divBtn{
+    margin-top: 60px;
+}
+.btn{
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid black;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.login{
+    margin-left: 800px;
+    margin-top: 80px;
+}
+.login a{
+    text-decoration: none;
+}
