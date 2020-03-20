@@ -1,0 +1,32 @@
+.nav{
+    display: flex;
+    flex-direction: column;    
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.titulo{
+    font-size: 50px;
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.but{
+    display: flex;
+    flex-direction: row;
+    background-color: cyan;
+
+}
+.but div{
+    padding: 15px;
+}
+.but div a{
+    text-decoration: none;
+    background-color: cyan;
+    padding: 15px;
+    color: black;
+}
+.but div a:hover{
+    background-color: darkcyan;
+}

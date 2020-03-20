@@ -3,7 +3,6 @@ import React from 'react';
 import logo from './logo.png';
 import './NavSup.css';
 
-
 class NavSuperior extends React.Component {
     
     render() { 
