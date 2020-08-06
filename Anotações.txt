@@ -11,6 +11,25 @@ Props
 Eventos
   -Click, Mouse Down, Double Click...
 
+Estado (State)
 
+Eventos
+
+Estilo (CSS)
+
+Lista de elementos
+
+SPA - Single page application
+  - Aplicações completas no navegador
+  - Retorna apenas os dados
+  - Roteamento
+      - A url irá ser usada para saber qual parte vou mostrar e/ou esconder
+      - Padrão de parâmentros (/recurso/:id/ação)
+      - Instalador (npm install --save react-router-dom)
+      - Criar Roteamento (Dois Componetes - 1. BrowserRouter(tag p/ habilitar), 2. Route(tag p/ declarar rota))
+      - React Router (Exact)
+      
 Extensões
   Simple React Snippets
+  ES7 React/Redux/GraphQL/React-Native snippets 
+

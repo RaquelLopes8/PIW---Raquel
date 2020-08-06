@@ -1,0 +1,49 @@
+.nav_superior{
+    height: 20%;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: row;
+  }
+
+.img{
+    left: 0;
+    width: 200px;
+    height: 100px;
+    margin-right: 50px;
+}
+
+.divBtn{
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+.btn{
+    width: 120px;
+    background-color: white;
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 18px;
+}
+.btn:hover{
+    background-color: violet;
+    color: white;
+}
+
+.login{
+    margin-left: 700px;
+    margin-top: 60px;
+}
+.login a{
+    color: violet;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 18px;
+    text-decoration: none;
+}
+.login a:hover{
+    background-color: violet;
+    color: white;
+}

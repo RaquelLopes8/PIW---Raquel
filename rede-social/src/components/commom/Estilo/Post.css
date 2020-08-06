@@ -1,0 +1,50 @@
+.post{
+    width: 300px;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color:white;
+    
+}
+.post div{
+    padding: 5px;
+}
+
+.postTitulo{
+    background-color:black;
+    font-weight: bold;
+    color:white;
+    border-radius: 15px 15px 0px 0px;
+}
+.cont{
+    font-size: 15px;
+    margin: 10px;
+}
+.butLike{
+    width: 65px;
+    height: 35px;
+    background-color: violet;
+    border-radius: 18px;
+    border: 1px solid violet;
+    box-shadow: none;
+    margin-left: 220px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+.butLike img{
+    width: 30px;
+    height: 30px;
+    margin-bottom: -7px;
+    margin-top: -5px;
+    margin-left: -3px;
+}
+
+.posts{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+
