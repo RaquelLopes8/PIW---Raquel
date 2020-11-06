@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 
 import logo from './Estilo/Imagem/logo.png';
 import './Estilo/NavSuperior.css';
@@ -10,8 +11,8 @@ class NavSuperior extends React.Component {
             <div className="nav_superior">
                 <img src= {logo} alt='logo' className="img"/>
                 <div className="divBtn">
-                    <button className="btn">Linha do tempo</button>
-                    <button className="btn">Postar</button>
+                    <NavLink to="/" className="btn">Linha do tempo</NavLink>
+                    <NavLink to="/postar" className="btn">Postar</NavLink>
                 </div>
                 <div className="login"><a href="raquel">Raquel Lopes</a></div>
             </div>

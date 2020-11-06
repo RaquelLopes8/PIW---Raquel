@@ -1,37 +1,80 @@
 import React, { Component } from 'react';
 
-import Post from './Post';
 import './Estilo/Post.css';
+import like from './Estilo/Imagem/like.png';
+import { connect } from 'react-redux';
+import { fetchPosts} from '../../action/posts';
+import { Link } from 'react-router-dom';
+import NavSuperior from './NavSuperior';
+
 
 class GaleriaPost extends Component {
-    state = { 
-        posts: [
-            {id:1, nomePessoa:"Miges", mensagem:"Quarentena dia sei lá qual", qtdLikes:1},
-            {id:2, nomePessoa:"Miges 2", mensagem:"E vamos de EAD", qtdLikes:5},
-            {id:3, nomePessoa:"Miges 3", mensagem:"Estou com saudades dos meus amigos", qtdLikes:2},
-            {id:4, nomePessoa:"P&D TODXS", mensagem: "Cailha de saúde LGBTI+", qtdLikes:8}
-        ]
+
+    /*state ={
+        like:0
+    }
+
+    curtidas = () =>{
+        this.setState({like: this.state.like+1})
+    }
+    
+    curtiu = () =>{
+        this.curtidas();
+        this.props.curtiu(this.state.like)
     }
 
     recebiCurtida = (likes) =>{
         console.log("O post recebeu" + likes + "Curtidas");
+    }*/
+    componentDidMount(){
+        this.props.fetchPosts();
     }
 
     render() { 
+
+        let listaPosts = [];
+        if(this.props.alunos != null){
+            for (let post of this.posts){
+                let corpoPost = (
+                    <div className="post">
+                        <div className="postTitulo">
+                            <Link to = {"/" + post.id > post.nomePessoa}></Link>
+                        </div>
+                        <div className="cont"> {post.mensagem} </div>
+                        <div>
+                            <button onClick={this.curtiu} 
+                            className="butLike" >
+                                <img src={like} alt="like"/> {this.state.like}</button>
+                        </div>
+                        <div className= "excluir">
+                            <button onClick= {()=> {
+                                    this.props.excluirPost(this.state.id);
+                                }}>Excluir</button>
+                        </div>
+                </div>
+                )
+                listaPosts.push(corpoPost);
+                console.log(listaPosts)
+            }
+        }
         return ( 
-            <div className="posts">
-                {this.state.posts.map(
-                    (posts) => (
-                        <Post nomePessoa={posts.nomePessoa} 
-                        mensagem={posts.mensagem}
-                        qtdLikes={posts.qtdLikes}
-                        curtiu={this.recebiCurtida}
-                        />
-                    )
-                )}
-            </div> 
-         );
+            <div>
+                <NavSuperior/>
+                {listaPosts}
+                
+            </div>                 
+        );
     }
 }
  
-export default GaleriaPost;
+const mapearStateParaProps = (state, props) => {
+    return{listaPosts : state.listaPosts}
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        fetchPosts: () => dispatch(fetchPosts())
+    }
+}
+
+export default connect(mapearStateParaProps, mapDispatchToProps)(GaleriaPost);

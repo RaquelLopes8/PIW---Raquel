@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 
+import { connect } from 'react-redux';
 import like from './Estilo/Imagem/like.png';
+import { darLike, excluirPost } from '../../action/posts';
 
 class Post extends Component {
+    constructor (props) {
+        super (props);
+        this.state = {
+            id: this.props.id,
+            nome: this.props.nomePessoa,
+            mensagem: this.props.mensagem,
+            qtdLikes: this.props.qtdLikes
+        }
+    }
+    
     state ={
         like:0
     }
@@ -29,9 +41,20 @@ class Post extends Component {
                     className="butLike" >
                         <img src={like} alt="like"/> {this.state.like}</button>
                 </div>
+                <div className= "excluir">
+                        <button onClick= {()=> {
+                                this.props.excluirPost(this.state.id);
+                            }}>Excluir</button>
+                </div>
             </div>
         );
     }
 }
- 
-export default Post;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        darLike: (postAtualizado) => dispatch(darLike(postAtualizado)),
+        excluirPost: (id) => dispatch(excluirPost(id)),
+    }
+}
+
+export default connect(null, mapDispatchToProps)(Post);

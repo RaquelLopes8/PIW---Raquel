@@ -1,0 +1,39 @@
+.botaoEnviar{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color:white;
+    color:black;
+    align-self: center;
+    border: 1px solid black;
+    border-radius: 18px;
+}
+
+.botaoEnviar:hover{
+    cursor: pointer;
+    background-color: violet;
+    color: white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+    margin: auto;
+}
+
+
+input, textarea{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 18px;
+}
+
+textarea{
+    resize: none;
+}
+
+h2{
+    margin: 30px 0px;
+}

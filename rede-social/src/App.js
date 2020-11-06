@@ -1,13 +1,22 @@
 import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import NavSuperior from './components/commom/NavSuperior';
 import GaleriaPost from './components/commom/GaleriaPost';
+import FormPost from './components/commom/Postar/FormPost';
 
 function App() {
   return (
     <div>
-      <NavSuperior/>
-      <GaleriaPost/>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <GaleriaPost/>
+          </Route>
+
+          <Route path="/postar" component={FormPost}></Route>
+
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
